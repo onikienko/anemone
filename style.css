@@ -1,5 +1,14 @@
 /* The game's own look: deep water, the shop's dark glass, its amber headings. */
 
+/* The game's own Nunito (native/assets/fonts), cut to Latin, served from here rather than Google
+   Fonts, so a visit to these pages tells nobody else about it. */
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-display: swap;
+}
+
 :root {
   --water-top: #0e3446;
   --water-bottom: #071c27;
