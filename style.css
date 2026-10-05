@@ -1,0 +1,154 @@
+/* The game's own look: deep water, the shop's dark glass, its amber headings. */
+
+:root {
+  --water-top: #0e3446;
+  --water-bottom: #071c27;
+  --glass: rgba(6, 22, 31, 0.72);
+  --rim: rgba(255, 255, 255, 0.12);
+  --text: #ffffff;
+  --dim: #b4ccd4;
+  --amber: #ffc97c;
+  --link: #8fd3e6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --water-top: #e4f1f5;
+    --water-bottom: #f4ecdc;
+    --glass: rgba(255, 255, 255, 0.86);
+    --rim: rgba(18, 49, 63, 0.12);
+    --text: #12313f;
+    --dim: #4b6773;
+    --amber: #a8640c;
+    --link: #1d6f88;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--water-bottom);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(var(--water-top), var(--water-bottom)) fixed;
+  color: var(--text);
+  font: 500 17px/1.6 "Nunito", system-ui, sans-serif;
+  padding: 48px 16px;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--glass);
+  border: 1px solid var(--rim);
+  border-radius: 18px;
+  padding: 32px 28px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.title img {
+  display: block;
+  flex: none;
+}
+
+.title .lede {
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+
+.lede {
+  color: var(--dim);
+  margin: 0 0 28px;
+}
+
+h2 {
+  color: var(--amber);
+  font-size: 19px;
+  font-weight: 900;
+  margin: 32px 0 8px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 20px 0 4px;
+}
+
+p,
+li {
+  margin: 0 0 10px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+a {
+  color: var(--link);
+}
+
+.menu {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+kbd {
+  font: inherit;
+  font-weight: 700;
+  border: 1px solid var(--rim);
+  border-radius: 6px;
+  padding: 0 5px;
+}
+
+footer {
+  max-width: 680px;
+  margin: 20px auto 0;
+  color: var(--dim);
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media (max-width: 520px) {
+  main {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .title {
+    gap: 14px;
+  }
+
+  .title img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .title.small img {
+    width: 48px;
+    height: 48px;
+  }
+}
